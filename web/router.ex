@@ -11,8 +11,8 @@ defmodule Shortenex.Router do
   scope "/", Shortenex do
     pipe_through :browser # Use the default browser stack
 
-    get "/", UrlController, :index
-    get "/s/:id", UrlController, :show
-    post "/s", UrlController, :create
+    get "/", LinkController, :index
+    get "/s/:code", LinkController, :show
+    post "/s", LinkController, :create
   end
 end
