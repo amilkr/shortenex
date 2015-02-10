@@ -26,7 +26,8 @@ defmodule Shortenex.Mixfile do
       {:phoenix, "~> 0.8.0"},
       {:cowboy, "~> 1.0"},
       {:postgrex, "~> 0.6.0"},
-      {:ecto, "~> 0.2.5"}
+      {:ecto, "~> 0.2.5"},
+      {:random, github: "mururu/elixir-random"}
     ]
   end
 end

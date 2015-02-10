@@ -7,4 +7,5 @@
   "poison": {:hex, :poison, "1.3.1"},
   "poolboy": {:hex, :poolboy, "1.4.2"},
   "postgrex": {:hex, :postgrex, "0.6.0"},
-  "ranch": {:hex, :ranch, "1.0.0"}}
+  "ranch": {:hex, :ranch, "1.0.0"},
+  "random": {:git, "git://github.com/mururu/elixir-random.git", "16f1ebf527a25916e07c20950db25994a1adba73", []}}

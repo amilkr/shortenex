@@ -8,14 +8,10 @@ defmodule Shortenex.LinkController do
   end
 
   def create(conn, %{"url" => url}) do
-    link = Shortenex.LinkQuery.find_by(:url, url) |> List.first
-    unless link do
-      code = "H3lr4"
-      link = %Shortenex.Link{code: code, url: url}
-      link = Shortenex.Repo.insert(link)
-    end
+    link = Shortenex.Link.find_or_create(url: url)
+
     conn
-    |> put_flash(:notice, "Here you have the shortened url: http://localhost:4000/s/#{code}")
+    |> put_flash(:notice, "Here you have the shortened url: http://localhost:4000/s/#{link.code}")
     |> redirect to: "/"
   end
 end
