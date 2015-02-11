@@ -1,3 +1,9 @@
+<div class="flash_error">
+  <div class="row">
+    <p><%= get_flash(@conn, :error) %></p>
+  </div>
+</div>
+
 <div class="jumbotron">
   <h2>Yet another url shortener</h2>
   <p class="lead">This is a simple project created to play a little bit with Elixir, Phoenix and Ecto.</p>
@@ -17,9 +23,11 @@
     </div>
   </form>
 
-  <div class="flash_notice">
-    <div class="row">
-      <p><%= get_flash(@conn, :notice) %></p>
+  <%= if @shortened_url do %>
+    <div class="">
+      the shortened url:
+      <a href="<%= @shortened_url %>"><%= @shortened_url %></a>  
     </div>
-  </div>
+  <%= end %>
+  
 </div>
