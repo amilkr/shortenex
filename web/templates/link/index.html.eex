@@ -4,10 +4,9 @@
   </div>
 </div>
 
+<h1>Shortenex</h1>
+<p>Yet another url shortener</p>
 <div class="jumbotron">
-  <h2>Yet another url shortener</h2>
-  <p class="lead">This is a simple project created to play a little bit with Elixir, Phoenix and Ecto.</p>
-
   <form class="form-horizontal" action="/s" method="post">
     <input type="hidden" name="csrf_token" value="<%= @conn.private.plug_session.csrf_token %>">
     <div class="form-group">
@@ -26,7 +25,7 @@
   <%= if @shortened_url do %>
     <div class="">
       the shortened url:
-      <a href="<%= @shortened_url %>"><%= @shortened_url %></a>  
+      <a href="<%= @shortened_url %>" target="_blank"><%= @shortened_url %></a>  
     </div>
   <%= end %>
   
