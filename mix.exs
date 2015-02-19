@@ -15,7 +15,7 @@ defmodule Shortenex.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {Shortenex, []},
-     applications: [:phoenix, :cowboy, :logger, :postgrex, :ecto]]
+     applications: [:phoenix, :cowboy, :logger, :postgrex, :ecto, :random]]
   end
 
   # Specifies your project dependencies
@@ -27,7 +27,8 @@ defmodule Shortenex.Mixfile do
       {:cowboy, "~> 1.0"},
       {:postgrex, "~> 0.6.0"},
       {:ecto, "~> 0.2.5"},
-      {:random, github: "mururu/elixir-random"}
+      {:random, github: "mururu/elixir-random"},
+      {:exrm, "~> 0.14.16"}
     ]
   end
 end

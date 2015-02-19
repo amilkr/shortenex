@@ -9,7 +9,8 @@ use Mix.Config
 config :shortenex, Shortenex.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "QnE0PuKJt5NNipsSD/urzmFM7j1MWXc+7xs3XN52xGDCIXtC/9lARa562Sc1/HSQ",
-  debug_errors: false
+  debug_errors: false,
+  server: true
 
 # Configures Elixir's Logger
 config :logger, :console,
